@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TheNews Portal | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Bricolage Grotesque'", sans-serif;
+        }
+    </style>
+</head>
+<body class="flex h-screen items-center justify-center p-4 bg-gray-100">
+    <div class="w-full max-w-sm mx-auto bg-white border border-gray-300 rounded-2xl p-6">
+        <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+
+        <form class="flex flex-col gap-4">
+            <input type="text" placeholder="Username" class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <input type="password" placeholder="Password" class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <button type="submit" class="bg-pink-500 text-white rounded-lg py-2 font-semibold hover:bg-pink-600 transition">Sign In</button>
+        </form>
+
+        <p class="text-sm text-gray-500 mt-4 text-center">Don't have an account? <span class="text-pink-500 cursor-pointer">Sign Up</span></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

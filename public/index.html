@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TheNews Portal | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Bricolage Grotesque'", sans-serif;
+        }
+    </style>
+</head>
+<body class="flex flex-col w-full max-w-6xl mx-auto min-h-screen gap-8 p-4">
+    <header>
+        <div class="flex items-center justify-between border-y border-gray-800 py-1">
+            <div class="flex items-center gap-2 text-sm font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 lucide lucide-globe-icon lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <span class="font-medium">Tuesday, October 29, 2024</span>
+            </div>
+            <button class="hover:bg-gray-200 hover:rounded p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+            </button>
+        </div>
+
+        <div class="flex items-center justify-center p-4">
+            <img
+                src="assets/logo.svg"
+                alt="GoNews Logo"
+                class="w-64 object-contain"
+            />
+        </div>
+
+        <div class="flex items-center text-sm font-medium justify-center border-y border-gray-800 gap-6 p-3">
+            <a class="hover:text-pink-500 cursor-pointer">
+                World News
+            </a>
+            <a class="hover:text-pink-500 cursor-pointer">
+                Politics
+            </a>
+            <a class="hover:text-pink-500 cursor-pointer">
+                Business
+            </a>
+            <a class="hover:text-pink-500 cursor-pointer">
+                Technology
+            </a>
+            <a class="hover:text-pink-500 cursor-pointer">
+                Health
+            </a>
+            <a class="hover:text-pink-500 cursor-pointer">
+                Sports
+            </a>
+            <a class="hover:text-pink-500 cursor-pointer">
+                Culture
+            </a>
+            <a class="hover:text-pink-500 cursor-pointer">
+                Podcast
+            </a>
+        </div>
+    </header>
+
+    <div class="h-[200vh] text-3xl">
+        Content Here!
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
