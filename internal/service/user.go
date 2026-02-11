@@ -43,3 +43,12 @@ func LoginUser(username, password string) (*model.User, error) {
 
 	return &user, nil
 }
+
+func GetUser(userID uint) (*model.User, error) {
+	var user model.User
+	if err := database.DB.First(&user, userID).Error; err != nil {
+		return nil, errors.New("user not found")
+	}
+
+	return &user, nil
+}

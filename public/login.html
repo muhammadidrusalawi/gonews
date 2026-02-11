@@ -23,22 +23,24 @@
             <h2 class="w-full max-w-[200px] text-2xl font-bold text-center leading-none">Login To Your Account</h2>
         </div>
 
-        <form class="flex flex-col gap-4">
+        <form id="loginForm" class="flex flex-col gap-4">
             <div class="w-full">
                 <label class="text-sm">Username</label>
-                <input type="text" placeholder="Username" class="w-full text-sm font-medium border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500">
+                <input id="username" type="text" required placeholder="Username" class="w-full text-sm font-medium border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500">
             </div>
             <div class="w-full">
                 <label class="text-sm">Password</label>
-                <input type="password" placeholder="Password" class="w-full text-sm font-medium border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500">
+                <input id="password" type="password" required placeholder="Password" class="w-full text-sm font-medium border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-pink-500">
             </div>
-            <button type="submit" class="bg-gray-200 text-gray-700 rounded-lg py-2 font-medium hover:bg-gray-300 transition">Login</button>
+            <button type="submit" class="bg-gray-200 text-gray-700 rounded-lg py-2 font-medium hover:bg-gray-300 transition cursor-pointer">Register</button>
         </form>
 
-        <p class="text-sm text-gray-500 mt-4 text-center">Don't have an account? <span class="text-black hover:underline cursor-pointer">Register</span></p>
+        <p class="text-sm text-gray-500 mt-4 text-center">Don't have an account? <a href="register.html" class="text-black hover:underline cursor-pointer">Register</a></p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

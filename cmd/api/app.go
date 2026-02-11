@@ -7,33 +7,22 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/joho/godotenv"
 	"github.com/muhammadidrusalawi/gonews/internal/database"
-	"github.com/muhammadidrusalawi/gonews/internal/handler"
+	"github.com/muhammadidrusalawi/gonews/internal/middleware"
+	"github.com/muhammadidrusalawi/gonews/internal/routes"
 )
 
 func main() {
-
 	if err := godotenv.Load(); err != nil {
 		log.Println("No .env file found")
 	}
-
 	database.InitDB()
 
 	app := fiber.New()
+	app.Use(middleware.ErrorMiddleware)
 	app.Use(logger.New())
 
 	app.Static("/", "./public")
-
-	api := app.Group("/api")
-
-	api.Post("/register", handler.Register)
-	api.Post("/login", handler.Login)
-
-	api.Get("/health", func(c *fiber.Ctx) error {
-		return c.JSON(fiber.Map{
-			"success": true,
-			"message": "OK!",
-		})
-	})
+	routes.ApiRoutes(app)
 
 	log.Fatal(app.Listen(":3000"))
 }
