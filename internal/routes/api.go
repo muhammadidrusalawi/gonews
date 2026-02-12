@@ -17,4 +17,8 @@ func ApiRoutes(app *fiber.App) {
 	api.Post("/register", handler.Register)
 	api.Post("/login", handler.Login)
 	api.Get("/profile", middleware.AuthMiddleware, handler.GetProfile)
+
+	api.Get("/articles", handler.GetAllArticlesHandler)
+	api.Post("/articles", middleware.AuthMiddleware, handler.CreateArticleHandler)
+	api.Get("/my-articles", middleware.AuthMiddleware, handler.GetMyArticlesHandler)
 }
