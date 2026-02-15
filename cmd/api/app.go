@@ -22,6 +22,7 @@ func main() {
 	app.Use(logger.New())
 
 	app.Static("/", "./public")
+	app.Static("/uploads", "./public/uploads")
 	routes.ApiRoutes(app)
 
 	log.Fatal(app.Listen(":3000"))
